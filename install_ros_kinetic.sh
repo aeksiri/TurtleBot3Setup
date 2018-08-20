@@ -2,6 +2,7 @@
 # Apache License 2.0
 # Copyright (c) 2017, ROBOTIS CO., LTD.
 # Edited by Bangkok University Robotics Laboratory 2018-08-20
+# Maintainer : Akkharaphong Eksiri, akkharaphong.e@bu.ac.th
 # ### from "sudo ntpdate ntp.ubuntu.com" to "sudo ntpdate -q ntp.ubuntu.com"
 
 echo ""
