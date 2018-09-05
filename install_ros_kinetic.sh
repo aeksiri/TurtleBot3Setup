@@ -86,5 +86,17 @@ sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
 
+echo "[Install dependent packages]"
+sudo apt-get install -y ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard
+sudo apt-get install -y ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan
+sudo apt-get install -y ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server
+sudo apt-get install -y ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl
+sudo apt-get install -y ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro
+sudo apt-get install -y ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping
+sudo apt-get install -y ros-kinetic-navigation
+
+echo "[Install Openssh Server]"
+sudo apt install -y openssh-server
+
 echo "[Complete!!!]"
 exit 0
