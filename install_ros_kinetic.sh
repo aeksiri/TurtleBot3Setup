@@ -98,7 +98,8 @@ sudo apt-get install -y ros-kinetic-rosserial-arduino ros-kinetic-rosserial-pyth
 sudo apt-get install -y ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl
 sudo apt-get install -y ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro
 sudo apt-get install -y ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping
-sudo apt-get install -y ros-kinetic-navigation
+sudo apt-get install -y ros-kinetic-navigation ros-kinetic-interactive-markers
+sudo apt-get install -y terminator
 
 echo
 echo
