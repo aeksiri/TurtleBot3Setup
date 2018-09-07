@@ -29,6 +29,7 @@ sudo apt-get -y install ros-kinetic-navigation
 sudo apt-get -y install openssh-server 
 sudo apt-get -y install ros-kinetic-interactive-markers
 sudo apt-get install -y terminator
+sudo apt-get install -y chromium-browser
 
 echo
 echo
