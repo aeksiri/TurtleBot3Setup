@@ -30,6 +30,7 @@ sudo apt-get -y install openssh-server
 sudo apt-get -y install ros-kinetic-interactive-markers
 sudo apt-get install -y terminator
 sudo apt-get install -y chromium-browser
+sudo apt-get install -y gedit 
 
 echo
 echo
