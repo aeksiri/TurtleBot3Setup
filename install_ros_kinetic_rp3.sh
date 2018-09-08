@@ -85,6 +85,8 @@ sh -c "echo \"source ~/$name_catkin_workspace/devel/setup.bash\" >> ~/.bashrc"
 sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
+sh -c "echo \"export TURTLEBOT3_MODEL=burger\" >> ~/.bashrc"
+
 source $HOME/.bashrc
 
 echo "[Complete!!!]"
