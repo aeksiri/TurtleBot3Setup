@@ -32,7 +32,7 @@ sudo apt-get install -y terminator
 sudo apt-get install -y chromium-browser
 sudo apt-get install -y gedit 
 
-sudo service ssh enable
+sudo service ssh restart
 
 echo
 echo
