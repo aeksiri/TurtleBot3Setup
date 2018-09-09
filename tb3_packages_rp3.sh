@@ -43,6 +43,7 @@ cd ~/catkin_ws/src/turtlebot3/turtlebot3_bringup
 sudo cp ./99-turtlebot3-cdc.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+sudo systemctl enable ssh
 sudo service ssh restart
 echo
 echo "[Complete]"
