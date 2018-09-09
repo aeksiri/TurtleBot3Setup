@@ -32,6 +32,8 @@ sudo apt-get install -y terminator
 sudo apt-get install -y chromium-browser
 sudo apt-get install -y gedit 
 
+sudo service ssh enable
+
 echo
 echo
 echo "******** Clone TurtleBot3's Source Code from Github *********"
