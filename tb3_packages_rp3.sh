@@ -6,33 +6,12 @@ echo "******** install dependent packages *********"
 echo 
 echo
 
-sudo apt-get -y install ros-kinetic-joy 
-sudo apt-get -y install ros-kinetic-teleop-twist-joy
-sudo apt-get -y install ros-kinetic-teleop-twist-keyboard
-sudo apt-get -y install ros-kinetic-laser-proc
-sudo apt-get -y install ros-kinetic-rgbd-launch
-sudo apt-get -y install ros-kinetic-depthimage-to-laserscan
-sudo apt-get -y install ros-kinetic-rosserial-arduino
-sudo apt-get -y install ros-kinetic-rosserial-python
-sudo apt-get -y install ros-kinetic-rosserial-server
-sudo apt-get -y install ros-kinetic-rosserial-client
-sudo apt-get -y install ros-kinetic-rosserial-msgs
-sudo apt-get -y install ros-kinetic-amcl
-sudo apt-get -y install ros-kinetic-map-server
-sudo apt-get -y install ros-kinetic-move-base
-sudo apt-get -y install ros-kinetic-urdf
-sudo apt-get -y install ros-kinetic-xacro
-sudo apt-get -y install ros-kinetic-compressed-image-transport
-sudo apt-get -y install ros-kinetic-rqt-image-view
-sudo apt-get -y install ros-kinetic-gmapping
-sudo apt-get -y install ros-kinetic-navigation
-sudo apt-get -y install openssh-server 
-sudo apt-get -y install ros-kinetic-interactive-markers
-sudo apt-get install -y terminator
-sudo apt-get install -y chromium-browser
-sudo apt-get install -y gedit 
-
-sudo service ssh restart
+sudo apt-get -y install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc
+sudo apt-get -y install ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python
+sudo apt-get -y install ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl
+sudo apt-get -y install ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-interactive-markers
+sudo apt-get -y install ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation
+sudo apt-get -y install openssh-server terminator chromium-browser gedit 
 
 echo
 echo
@@ -64,4 +43,7 @@ cd ~/catkin_ws/src/turtlebot3/turtlebot3_bringup
 sudo cp ./99-turtlebot3-cdc.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+sudo service ssh restart
+echo
 echo "[Complete]"
+echo
