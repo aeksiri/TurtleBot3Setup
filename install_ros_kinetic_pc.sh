@@ -109,10 +109,10 @@ echo
 echo
 echo
 sudo apt install -y openssh-server
-sudo systemctl enable ssh
-sudo service ssh restart
-echo
+
+
 echo "[Complete!!!]"
+echo
 echo
 echo
 exit 0
