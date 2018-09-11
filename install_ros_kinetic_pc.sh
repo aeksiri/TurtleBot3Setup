@@ -67,6 +67,7 @@ mkdir -p $HOME/$name_catkin_workspace/src
 cd $HOME/$name_catkin_workspace/src
 catkin_init_workspace
 cd $HOME/$name_catkin_workspace
+source /opt/ros/$name_ros_version/setup.sh
 catkin_make
 
 echo "[Set the ROS evironment]"
@@ -85,21 +86,6 @@ sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
-echo
-echo
-echo
-echo "[Install dependent packages]"
-echo
-echo
-echo
-sudo apt-get install -y ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard
-sudo apt-get install -y ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan
-sudo apt-get install -y ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server
-sudo apt-get install -y ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl
-sudo apt-get install -y ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro
-sudo apt-get install -y ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping
-sudo apt-get install -y ros-kinetic-navigation ros-kinetic-interactive-markers
-sudo apt-get install -y terminator
 
 echo
 echo
