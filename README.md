@@ -13,4 +13,4 @@ $ cd TurtleBot3Setup
 $ chmod +x *.sh
 
 1.3 Install ROS-Kinetic and TurtleBot3's Packages
-$ ./install_ros_kinetic_pc.sh && ./tb3_packages_pc.sh
+$ bash install_ros_kinetic_pc.sh && bash tb3_packages_pc.sh
