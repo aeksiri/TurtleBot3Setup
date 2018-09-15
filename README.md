@@ -9,6 +9,7 @@ $ cd ~
 $ git clone https://github.com/aeksiri/TurtleBot3Setup.git
 $ cd TurtleBot3Setup
 
+If the files are an executable...go to 1.3
 1.2 Change mode to be an execute files
 $ chmod +x *.sh
 
