@@ -55,6 +55,7 @@ echo "[Install the ros-base]"
 sudo apt-get install -y ros-$name_ros_version-ros-base
 
 echo "[Initialize rosdep]"
+sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
 sudo sh -c "rosdep init"
 rosdep update
 
