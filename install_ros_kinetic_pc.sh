@@ -96,7 +96,7 @@ echo
 echo
 echo
 sudo apt install -y openssh-server
-sudo systemcrl enable ssh
+sudo systemctl enable ssh
 sudo service ssh restart
 
 echo
