@@ -27,6 +27,8 @@ echo
 cd ~/catkin_ws 
 catkin_make
 
+cd ~/catkin_ws/src
+
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 
 echo
