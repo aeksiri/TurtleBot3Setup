@@ -17,6 +17,18 @@ echo
 cd ~/catkin_ws/src
 git clone https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver.git
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+
+echo
+echo
+echo "******** Compile the turtlebot3_msgs *********"
+echo 
+echo
+
+cd ~/catkin_ws 
+catkin_make
+
+cd ~/catkin_ws/src
+
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 
 echo
