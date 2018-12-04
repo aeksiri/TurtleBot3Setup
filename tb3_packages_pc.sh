@@ -60,7 +60,7 @@ echo
 echo
 
 cd ~/catkin_ws/src
-git clone https://github.com/chentinghao/download_google_drive.git
+git clone https://github.com/aeksiri/download_google_drive.git
 cd download_google_drive
 chmod +x download_gdrive.py
 pip install tqdm
