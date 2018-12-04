@@ -52,6 +52,28 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 sudo systemctl enable ssh
 sudo service ssh restart
+
 echo
-echo "[Complete]"
+echo
+echo "******** Download and Install TurtleBot3 Blockly ********"
+echo 
+echo
+
+cd ~/catkin_ws/src
+git clone https://github.com/chentinghao/download_google_drive.git
+cd download_google_drive
+chmod +x download_gdrive.py
+pip install tqdm
+python download_gdrive.py 1ib5wb3TMpGUChPnR_sKnZO0-8oH-qhk4 ~/catkin_ws/src/turtlebot3_blockly.tar.gz
+cd ~/catkin_ws/src
+tar --extract -f turtlebot3_blockly.tar.gz
+
+chmod +x ~/catkin_ws/src/turtlebot3_blockly/scripts/*.py
+chmod +x ~/catkin_ws/src/turtlebot3_blockly/frontend/blockly/generators/python/scripts/turtlebot3/*.py
+
+cd ~/catkin_ws
+catkin_make
+
+echo
+echo "[!!!Completed!!!]"
 echo
