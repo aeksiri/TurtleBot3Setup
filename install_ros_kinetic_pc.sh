@@ -95,7 +95,7 @@ echo "[Install Openssh Server]"
 echo
 echo
 echo
-sudo apt install -y openssh-server
+sudo apt install -y openssh-*
 sudo systemctl enable ssh
 sudo service ssh restart
 
