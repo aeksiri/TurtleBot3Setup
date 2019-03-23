@@ -91,5 +91,16 @@ sh -c "echo \"export TURTLEBOT3_MODEL=burger\" >> ~/.bashrc"
 
 source $HOME/.bashrc
 
+echo
+echo
+echo
+echo "[Install Openssh Server]"
+echo
+echo
+echo
+sudo apt install -y openssh-*
+sudo systemctl enable ssh
+sudo service ssh restart
+
 echo "[Complete!!!]"
 exit 0
