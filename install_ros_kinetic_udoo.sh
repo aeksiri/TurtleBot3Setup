@@ -6,7 +6,7 @@
 # ### from "sudo ntpdate ntp.ubuntu.com" to "sudo ntpdate -q ntp.ubuntu.com"
 
 echo ""
-echo "[Note] Target OS version  >>> Ubuntu 16.04.x (xenial) or Linux Mint 18.x"
+echo "[Note] Target OS version  >>> Ubuntu 16.04.x (xenial) or Linux Mint 18.x or Lubuntu 16.04.x"
 echo "[Note] Target ROS version >>> ROS Kinetic Kame"
 echo "[Note] Catkin workspace   >>> $HOME/catkin_ws"
 echo ""
@@ -26,6 +26,9 @@ sudo apt-get upgrade -y
 echo "[Install build environment, the chrony, ntpdate and set the ntpdate]"
 sudo apt-get install -y chrony ntpdate build-essential
 sudo ntpdate -q ntp.ubuntu.com
+
+echo "[Install Git]"
+sudo apt install git git-gui -y
 
 echo "[Add the ROS repository]"
 if [ ! -e /etc/apt/sources.list.d/ros-latest.list ]; then
@@ -52,7 +55,8 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 echo "[Install the ros-desktop-full and all rqt plugins]"
-sudo apt-get install -y ros-$name_ros_version-desktop-full ros-$name_ros_version-rqt-*
+sudo apt install ros-kinetic-desktop-full 
+sudo apt install ros-kinetic-rqt-*
 
 echo "[Initialize rosdep]"
 sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
@@ -61,17 +65,9 @@ rosdep update
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
-sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 
-echo "[Make the catkin workspace and test the catkin_make]"
-mkdir -p $HOME/$name_catkin_workspace/src
-cd $HOME/$name_catkin_workspace/src
-catkin_init_workspace
-cd $HOME/$name_catkin_workspace
-source /opt/ros/$name_ros_version/setup.sh
-catkin_make
-
-echo "[Set the ROS evironment]"
+echo "[Set the ROS evironment into the ~/.bashrc]"
 sh -c "echo \"alias eb='nano ~/.bashrc'\" >> ~/.bashrc"
 sh -c "echo \"alias geb='gedit ~/.bashrc'\" >> ~/.bashrc"
 sh -c "echo \"alias sb='source ~/.bashrc'\" >> ~/.bashrc"
@@ -88,6 +84,14 @@ sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
+
+echo "[Make the catkin workspace and test the catkin_make]"
+mkdir -p $HOME/$name_catkin_workspace/src
+cd $HOME/$name_catkin_workspace/src
+catkin_init_workspace
+cd $HOME/$name_catkin_workspace
+source /opt/ros/$name_ros_version/setup.bash
+catkin_make
 
 echo
 echo
