@@ -64,7 +64,7 @@ sudo sh -c "rosdep init"
 rosdep update
 
 echo "[Environment setup and getting rosinstall]"
-source /opt/ros/$name_ros_version/setup.sh
+source /opt/ros/melodic/setup.sh
 sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 
 echo "[Set the ROS evironment into the ~/.bashrc]"
