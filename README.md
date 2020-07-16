@@ -21,3 +21,7 @@ If the files are an executable...go to 1.3
 1.3 Install ROS-Kinetic and TurtleBot3's Packages
 
 `./install_ros_kinetic_pc.sh && ./bash tb3_packages_pc.sh && ./raspicam_autorace_pkgs.sh`
+
+OR ROS-Melodic and TurtleBot3's Packages
+
+`./install_ros_melodic_pc.sh && ./bash tb3_packages_pc.sh && ./raspicam_autorace_pkgs.sh`
